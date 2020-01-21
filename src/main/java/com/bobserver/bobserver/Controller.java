@@ -14,7 +14,7 @@ public class Controller {
     }
 
     @GetMapping("/username")
-    public User usernameCall(@RequestParam(value = "username", defaultValue = "@JeffBezosOfficial") String username){
+    public User usernameCall(@RequestParam(value = "username", defaultValue = "@JeffBezos") String username){
         UserGroup group = new UserGroup(username);
         return group.getCurrUser();
     }

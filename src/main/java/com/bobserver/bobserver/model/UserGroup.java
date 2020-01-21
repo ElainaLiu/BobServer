@@ -9,13 +9,13 @@ public class UserGroup {
     private User currUser;
 
     public UserGroup(String name){
-        String[] atts = {"Friendly", "Worldy", "Empathetic"};
-        double[] vals1 = {40.7, 80.3, 2.2};
-        double[] vals2 = {70.9, 60.2, 40.3};
-        double[] vals3 = {10.5, 50.3, 20.3};
-        this.users.put("@JeffBezosOfficial", new User("@JeffBezos", atts, vals1));
-        this.users.put("@TimApple", new User("@TimApple", atts, vals2));
-        this.users.put("@PresDrake", new User("@PresDrake", atts, vals3));
+        String[] atts = {"Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Emotional Range"};
+        double[] vals1 = {40.7, 80.3, 2.2, 67.8, 34.9};
+        double[] vals2 = {70.9, 60.2, 40.3, 3.2, 12.4};
+        double[] vals3 = {10.5, 50.3, 20.3, 27.5, 0.5};
+        this.users.put("@JeffBezos", new User("@JeffBezos", atts, vals1));
+        this.users.put("@Tim_Cook", new User("@Tim_Cook", atts, vals2));
+        this.users.put("@OSUPrezDrake", new User("@OSUPrezDrake", atts, vals3));
         this.currUser = this.users.get(name);
     }
 
