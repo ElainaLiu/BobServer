@@ -6,19 +6,18 @@ import java.util.*;
 public class User {
 
     private String username;
-    private Map<String, Double> attributes;
-    private List<String> atts;
-    private List<Double> vals;
+    private HashMap<String, Double> attributes;
+    private String[] attributeNames;
+    private double[] attributeVals;
 
-    public User(String name, List<String> attributeNames, List<Double> attributeVals){
+    public User(String name, String[] attributeNames, double[] attributeVals){
         this.username = name;
-        /*this.attributes = HashMap<>();
-        for(int i = 0; i < attributeNames.size(); i++){
-            this.attributes.put(attributeNames.get(i), attributeVals.get(i));
-        }*/
-        this.atts = attributeNames;
-        this.vals = attributeVals;
-        return;
+        this.attributes = new HashMap<>();
+        for(int i = 0; i < attributeNames.length; i++){
+            this.attributes.put(attributeNames[i], attributeVals[i]);
+        }
+        this.attributeNames = attributeNames;
+        this.attributeVals = attributeVals;
     }
 
     public String getUsername(){
@@ -29,11 +28,11 @@ public class User {
         return this.attributes;
     }
 
-    public List<String> getAttributes(){
-        return this.atts;
+    public String[] getAttributes(){
+        return this.attributeNames;
     }
 
-    public List<Double> getVals(){
-        return this.vals;
+    public double[] getVals(){
+        return this.attributeVals;
     }
 }
