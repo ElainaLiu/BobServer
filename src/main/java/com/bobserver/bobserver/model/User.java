@@ -9,8 +9,9 @@ public class User {
     private HashMap<String, Double> attributes;
     private String[] attributeNames;
     private double[] attributeVals;
+    private String playlistUrl;
 
-    public User(String name, String[] attributeNames, double[] attributeVals){
+    public User(String name, String[] attributeNames, double[] attributeVals, String url){
         this.username = name;
         this.attributes = new HashMap<>();
         for(int i = 0; i < attributeNames.length; i++){
@@ -18,6 +19,7 @@ public class User {
         }
         this.attributeNames = attributeNames;
         this.attributeVals = attributeVals;
+        this.playlistUrl = url;
     }
 
     public String getUsername(){
@@ -34,5 +36,9 @@ public class User {
 
     public double[] getVals(){
         return this.attributeVals;
+    }
+
+    public String getUrl(){
+        return this.playlistUrl;
     }
 }

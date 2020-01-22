@@ -18,4 +18,10 @@ public class Controller {
         UserGroup group = new UserGroup(username);
         return group.getCurrUser();
     }
+
+    @GetMapping("/playlist")
+    public String playlistCall(@RequestParam(value = "username", defaultValue = "@JeffBezos") String username){
+        UserGroup group = new UserGroup(username);
+        return group.getCurrUser().getUrl();
+    }
 }
