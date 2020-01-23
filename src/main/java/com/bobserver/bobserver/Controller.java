@@ -1,6 +1,5 @@
 package com.bobserver.bobserver;
 
-import com.bobserver.bobserver.model.User;
 import com.bobserver.bobserver.model.UserGroup;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
